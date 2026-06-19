@@ -1,0 +1,45 @@
+{
+  "title": "さら｜ひとり社長のAI自動化",
+  "tagline": "事務に追われるひとり社長のための、コピペで動くAI業務自動化",
+  "avatarEmoji": "⚡",
+  "primaryLinks": [
+    {
+      "label": "無料特典：AI業務時短プロンプト10選",
+      "description": "請求メール・議事録要約・フォーム整理など即戦力",
+      "url": "https://note.com/cozy_quokka3375/n/n85a0d5e9449d",
+      "badge": "無料",
+      "highlight": true
+    },
+    {
+      "label": "業務自動化テンプレ5点パック",
+      "description": "集計・請求書・問い合わせ・予約・フォーム（3,980円）",
+      "url": "https://note.com/cozy_quokka3375/n/n0be9725fd221",
+      "badge": "本命"
+    },
+    {
+      "label": "請求書・帳票GASテンプレ",
+      "description": "スプレッドシートからPDF自動作成（980円・入口）",
+      "url": "https://note.com/cozy_quokka3375/n/nba36f75f6177",
+      "badge": "980円"
+    }
+  ],
+  "socialLinks": [
+    {
+      "platform": "Threads",
+      "url": "#",
+      "icon": "threads"
+    },
+    {
+      "platform": "X",
+      "url": "#",
+      "icon": "x"
+    },
+    {
+      "platform": "note",
+      "url": "https://note.com/cozy_quokka3375",
+      "icon": "note",
+      "optional": true
+    }
+  ],
+  "footer": "© 2026 さら｜ひとり社長のAI自動化"
+}

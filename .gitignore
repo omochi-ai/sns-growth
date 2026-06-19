@@ -1,0 +1,21 @@
+# --- 秘密情報（絶対にコミットしない） ---
+.env
+.env.*
+!.env.example
+
+# --- 依存・ビルド ---
+node_modules/
+dist/
+build/
+
+# --- 実行時生成物 ---
+logs/
+exports/
+output/
+*.log
+data/posts.json
+
+# --- OS ---
+Thumbs.db
+.DS_Store
+desktop.ini

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="事務に追われるひとり社長のための、コピペで動くAI業務自動化">
+  <title>さら｜ひとり社長のAI自動化</title>
+  <style>
+    :root {
+      --bg: #0f0f14;
+      --card: #1a1a24;
+      --card-hover: #222230;
+      --accent: #6c8cff;
+      --accent-soft: #3d4f80;
+      --text: #f0f0f5;
+      --muted: #9898a8;
+      --highlight: linear-gradient(135deg, #3d4f80 0%, #1a1a24 100%);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem 3rem;
+      line-height: 1.5;
+    }
+    .container { width: 100%; max-width: 420px; }
+    .profile { text-align: center; margin-bottom: 2rem; }
+    .avatar {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--highlight);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem; margin: 0 auto 1rem;
+      border: 2px solid var(--accent-soft);
+    }
+    h1 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .tagline { color: var(--muted); font-size: 0.9rem; }
+    .links { display: flex; flex-direction: column; gap: 0.75rem; }
+    .link-card {
+      display: block; background: var(--card); border-radius: 12px;
+      padding: 1rem 1.1rem; text-decoration: none; color: var(--text);
+      border: 1px solid transparent; transition: background 0.15s, border-color 0.15s;
+    }
+    .link-card:hover { background: var(--card-hover); border-color: var(--accent-soft); }
+    .link-card.highlight { background: var(--highlight); border-color: var(--accent); }
+    .label { display: block; font-weight: 600; font-size: 0.95rem; }
+    .badge {
+      display: inline-block; margin-left: 0.4rem; font-size: 0.7rem;
+      background: var(--accent); color: #fff; padding: 0.1rem 0.45rem;
+      border-radius: 999px; vertical-align: middle; font-weight: 500;
+    }
+    .desc { display: block; margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted); }
+    .social-row {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;
+      margin-top: 2rem;
+    }
+    .social {
+      color: var(--text); text-decoration: none; font-size: 0.85rem;
+      padding: 0.45rem 0.85rem; border-radius: 999px;
+      background: var(--card); border: 1px solid var(--accent-soft);
+    }
+    .social:hover { background: var(--card-hover); }
+    .social.muted { color: var(--muted); border-style: dashed; }
+    footer { text-align: center; margin-top: 2.5rem; color: var(--muted); font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="profile">
+      <div class="avatar">⚡</div>
+      <h1>さら｜ひとり社長のAI自動化</h1>
+      <p class="tagline">事務に追われるひとり社長のための、コピペで動くAI業務自動化</p>
+    </header>
+    <nav class="links" aria-label="メインリンク">
+<a class="link-card highlight" href="#" target="_blank" rel="noopener noreferrer">
+  <span class="label">無料特典：AI業務時短プロンプト10選<span class="badge">無料</span></span>
+  <span class="desc">請求メール・議事録要約・フォーム整理など即戦力</span>
+</a>
+<a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+  <span class="label">業務自動化テンプレ5点パック<span class="badge">本命</span></span>
+  <span class="desc">集計・請求書・問い合わせ・予約・フォーム（3,980円）</span>
+</a>
+<a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
+  <span class="label">請求書・帳票GASテンプレ<span class="badge">980円</span></span>
+  <span class="desc">スプレッドシートからPDF自動作成（980円・入口）</span>
+</a>
+    </nav>
+    <div class="social-row">
+<a class="social" href="https://note.com/cozy_quokka3375" target="_blank" rel="noopener noreferrer" title="note">n note</a>
+
+    </div>
+    <footer>© 2026 さら｜ひとり社長のAI自動化</footer>
+  </div>
+</body>
+</html>
