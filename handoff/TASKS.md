@@ -50,8 +50,10 @@
 ## T-008 [ ] Cursor/VPSからSlackリアルタイム通知
 - 仕様：`SPEC_slack-notify.md`／スクリプト：`scripts/notify-slack.sh`（作成済み）
 - ゴール：STATUS/DECISIONS更新・要相談・停止のたびに `notify-slack.sh "メッセージ"` を呼び、`#omochi_デプロイ` へ投稿。
-- 前提：社長がSlack Incoming Webhookを発行し `.env` の `SLACK_WEBHOOK_URL` に設定（→設定後に有効化）。
-- 未設定の間は STATUS.md に `[要Slack通知]` と書き、Claude Codeが代理投稿（フォールバック）。
+- 前提：✅ Webhook発行済み・VPSの`.env`に`SLACK_WEBHOOK_URL`設定済み・疎通テストOK（2026-06-22）。
+- Cursorは `notify-slack.sh` を**実際の更新フローに組み込むだけ**（STATUS/DECISIONS追記とセットで呼ぶ）。特に**CW関連の進捗・要返信は頻回なので確実に通知**。
+- フォールバック：投稿失敗時は STATUS.md に `[要Slack通知]` と明記→Claude Codeが代理投稿。
+- ⚠️ `SLACK_WEBHOOK_URL` は秘密。`.env`のみ・`.env.example`やコード・ログに書かない。
 
 ---
 
