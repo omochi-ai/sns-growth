@@ -19,3 +19,6 @@ data/posts.json
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# --- Claude Code 個人設定（共有しない） ---
+.claude/settings.local.json
