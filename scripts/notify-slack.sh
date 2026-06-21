@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Slack通知スクリプト（VPS / Cursor / cron など Slack MCPが無い環境用）
+# Slack通知スクリプト（VPS / Cursor / cron / Git Bash など Slack MCPが無い環境用）
 # 使い方: ./scripts/notify-slack.sh "メッセージ本文"
 # 事前準備: 環境変数 SLACK_WEBHOOK_URL を設定（または リポジトリ直下の .env に記載）
 #   例) .env に  SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXX/YYY/ZZZ
 #   ※ .env は .gitignore 済み。Webhook URLは秘密情報なので絶対にコミットしない。
-set -euo pipefail
+set -uo pipefail
 
 MSG="${1:-}"
 if [ -z "$MSG" ]; then
@@ -22,11 +22,15 @@ if [ -z "${SLACK_WEBHOOK_URL:-}" ]; then
   exit 1
 fi
 
-# 本文をJSON文字列に安全にエンコード
-if command -v python3 >/dev/null 2>&1; then
+# 本文をJSON文字列に安全にエンコード（環境依存に強い順で試行）
+PAYLOAD=""
+if python3 -c 'import sys,json' >/dev/null 2>&1; then
   PAYLOAD=$(printf '%s' "$MSG" | python3 -c 'import json,sys; print(json.dumps({"text": sys.stdin.read()}))')
+elif command -v jq >/dev/null 2>&1; then
+  PAYLOAD=$(printf '%s' "$MSG" | jq -Rs '{text: .}')
+elif command -v perl >/dev/null 2>&1; then
+  PAYLOAD=$(printf '%s' "$MSG" | perl -0777 -ne 's/([\\"])/\\$1/g; s/\r//g; s/\n/\\n/g; print "{\"text\":\"$_\"}"')
 else
-  # python3が無い場合の簡易フォールバック（改行・ダブルクオートのみ対応）
   ESC=$(printf '%s' "$MSG" | sed 's/\\/\\\\/g; s/"/\\"/g' | awk 'BEGIN{ORS="\\n"}{print}')
   PAYLOAD="{\"text\": \"$ESC\"}"
 fi

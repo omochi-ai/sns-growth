@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# post-commit: handoff/STATUS.md or handoff/DECISIONS.md を含むコミット時に
+# 自動でSlackへ通知する（Claude Code / Cursor 共通。誰が・どの環境でも、commitするだけで発火）。
+# 有効化: リポジトリ直下で `git config core.hooksPath scripts/git-hooks`
+# 前提: .env の SLACK_WEBHOOK_URL（notify-slack.sh が参照）
+
+REPO="$(git rev-parse --show-toplevel 2>/dev/null)" || exit 0
+CHANGED="$(git -C "$REPO" diff-tree --no-commit-id --name-only -r HEAD 2>/dev/null || true)"
+printf '%s\n' "$CHANGED" | grep -Eq 'handoff/(STATUS|DECISIONS)\.md' || exit 0
+
+SUBJECT="$(git -C "$REPO" log -1 --pretty=%s 2>/dev/null || echo '(no subject)')"
+ADDED="$(git -C "$REPO" diff-tree -p HEAD -- 'handoff/STATUS.md' 'handoff/DECISIONS.md' 2>/dev/null \
+  | grep '^+' | grep -v '^+++' | sed 's/^+//' | grep -v '^[[:space:]]*$' | head -12 || true)"
+
+MSG="📣 STATUS/DECISIONS 更新
+コミット: ${SUBJECT}
+
+${ADDED}
+
+全文 → https://github.com/omochi-ai/sns-growth/tree/master/handoff"
+
+# 通知（失敗してもコミットは止めない）
+"$REPO/scripts/notify-slack.sh" "$MSG" || true
+exit 0

@@ -5,6 +5,8 @@
 
 ---
 
+[2026-06-22] ops 完了 — Slack自動通知を**完全自動化**。post-commitフック（`scripts/git-hooks/post-commit`）を有効化し、`handoff/STATUS.md`／`DECISIONS.md` を含むコミットで**自動的に #omochi_デプロイ へ通知**（Claude Code / Cursor 共通・手動呼び出し不要）。VPSでの有効化は `git config core.hooksPath scripts/git-hooks` を1回実行。
+
 [2026-06-19] T-004 完了 — `linkpage/config.json` + `build-linkpage` で `docs/index.html` 生成。GitHub Pages（/docs）デプロイ可能。商品URLは `#` プレースホルダ（要差替え）。
 
 [2026-06-19] T-003 完了 — `src/shorts/`（VOICEVOX+ffmpeg）。`shorts --dry-run` で mp4 1本生成確認（92KB）。VOICEVOX未起動のため音声付きフル生成はエンジン起動後に要確認（D-003無料構成）。
