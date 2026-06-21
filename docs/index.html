@@ -14,16 +14,18 @@
   .avatar{ width:84px; height:84px; border-radius:50%; background:linear-gradient(135deg,#2b3a67,#4f8cff); display:flex; align-items:center; justify-content:center; font-size:42px; margin:0 auto 14px; box-shadow:0 6px 24px rgba(79,140,255,.35); }
   .name{ font-size:21px; font-weight:700; }
   .tagline{ font-size:13.5px; color:var(--sub); margin-top:8px; line-height:1.7; }
-  .links{ display:flex; flex-direction:column; gap:13px; margin-top:24px; }
-  a.link{ display:block; text-decoration:none; color:var(--text); background:var(--card); border:1px solid #2a303c; border-radius:15px; padding:16px 18px; transition:transform .12s ease, border-color .12s ease, background .12s ease; }
+  .sec{ font-size:11.5px; color:var(--sub); letter-spacing:.08em; margin:22px 4px 10px; font-weight:700; }
+  .links{ display:flex; flex-direction:column; gap:11px; }
+  a.link{ display:block; text-decoration:none; color:var(--text); background:var(--card); border:1px solid #2a303c; border-radius:15px; padding:15px 17px; transition:transform .12s ease, border-color .12s ease, background .12s ease; }
   a.link:hover{ transform:translateY(-2px); border-color:var(--accent); background:var(--card2); }
   a.link.hl{ background:linear-gradient(135deg,#1d2a4a,#24345e); border-color:#3f6bd1; }
   .row{ display:flex; align-items:center; gap:10px; }
-  .label{ font-size:15px; font-weight:700; line-height:1.45; }
-  .badge{ font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px; white-space:nowrap; }
+  .label{ font-size:14.5px; font-weight:700; line-height:1.45; }
+  .badge{ font-size:11px; font-weight:700; padding:2px 9px; border-radius:999px; white-space:nowrap; margin-left:auto; }
   .b-free{ background:#1f6f43; color:#d7ffe8; }
   .b-main{ background:#5a3fb0; color:#ece4ff; }
   .b-price{ background:#3a4254; color:#dbe2f0; }
+  .b-svc{ background:#0f5b66; color:#cdf3f8; }
   .b-pr{ background:#3a3f4b; color:var(--pr); border:1px solid #4a5161; }
   .desc{ font-size:12.5px; color:var(--sub); margin-top:6px; line-height:1.6; }
   .social{ display:flex; justify-content:center; gap:18px; margin-top:26px; }
@@ -40,27 +42,48 @@
       <div class="tagline">事務や雑務に追われる、ひとりで頑張る人のための<br>コピペで動くAI業務自動化</div>
     </div>
 
+    <div class="sec">▼ まずはこちら（無料）</div>
     <div class="links">
       <a class="link hl" href="https://note.com/cozy_quokka3375/n/n85a0d5e9449d" target="_blank" rel="noopener">
-        <div class="row"><span class="label">無料特典：AI業務時短プロンプト10選</span><span class="badge b-free">無料</span></div>
+        <div class="row"><span class="label">AI業務時短プロンプト10選</span><span class="badge b-free">無料</span></div>
         <div class="desc">請求メール・議事録要約・フォーム整理など即戦力</div>
       </a>
+    </div>
 
+    <div class="sec">▼ コピペで使えるテンプレ・プロンプト</div>
+    <div class="links">
+      <a class="link" href="https://note.com/cozy_quokka3375/n/nda68efbde9a9" target="_blank" rel="noopener">
+        <div class="row"><span class="label">業務効率化AIプロンプト集（コピペ20選）</span><span class="badge b-price">980円</span></div>
+        <div class="desc">議事録・メール・GAS・Excel をまるごと時短</div>
+      </a>
+      <a class="link" href="https://note.com/cozy_quokka3375/n/nba36f75f6177" target="_blank" rel="noopener">
+        <div class="row"><span class="label">請求書・帳票GASテンプレ</span><span class="badge b-price">980円</span></div>
+        <div class="desc">スプレッドシートからPDFを自動作成</div>
+      </a>
       <a class="link" href="https://note.com/cozy_quokka3375/n/n0be9725fd221" target="_blank" rel="noopener">
         <div class="row"><span class="label">業務自動化テンプレ5点パック</span><span class="badge b-main">本命</span></div>
         <div class="desc">集計・請求書・問い合わせ・予約・フォーム（3,980円）</div>
       </a>
+    </div>
 
-      <a class="link" href="https://note.com/cozy_quokka3375/n/nba36f75f6177" target="_blank" rel="noopener">
-        <div class="row"><span class="label">請求書・帳票GASテンプレ</span><span class="badge b-price">980円</span></div>
-        <div class="desc">スプレッドシートからPDF自動作成（入口）</div>
+    <div class="sec">▼ 代行・相談（ココナラ）</div>
+    <div class="links">
+      <a class="link" href="https://coconala.com/services/4266986" target="_blank" rel="noopener">
+        <div class="row"><span class="label">AI業務自動化の代行・構築</span><span class="badge b-svc">代行</span></div>
+        <div class="desc">面倒な定型作業を、あなたの環境に合わせて自動化</div>
       </a>
+      <a class="link" href="https://coconala.com/services/4277675" target="_blank" rel="noopener">
+        <div class="row"><span class="label">LLMO診断（AIに見つけてもらえるか）</span><span class="badge b-svc">診断</span></div>
+        <div class="desc">生成AI時代の見つけられ方をチェック・改善提案</div>
+      </a>
+    </div>
 
+    <div class="sec">▼ おすすめツール（PR）</div>
+    <div class="links">
       <a class="link" href="https://px.a8.net/svt/ejp?a8mat=4B60CK+1PX3OY+3SPO+9FDAJ6" target="_blank" rel="nofollow noopener sponsored">
         <div class="row"><span class="label">会計ソフト freee（個人事業主の定番）</span><span class="badge b-pr">PR</span></div>
         <div class="desc">記帳・確定申告を自動化。クラウド会計シェアNo.1</div>
       </a>
-
       <a class="link" href="https://px.a8.net/svt/ejp?a8mat=4B60CK+1YULRM+4JGQ+BX3J6" target="_blank" rel="nofollow noopener sponsored">
         <div class="row"><span class="label">マネーフォワード クラウド確定申告</span><span class="badge b-pr">PR</span></div>
         <div class="desc">明細の自動取込が強い。書類作成までカンタン</div>

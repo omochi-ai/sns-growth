@@ -4,11 +4,23 @@
   "avatarEmoji": "🍡",
   "primaryLinks": [
     {
-      "label": "無料特典：AI業務時短プロンプト10選",
+      "label": "AI業務時短プロンプト10選",
       "description": "請求メール・議事録要約・フォーム整理など即戦力",
       "url": "https://note.com/cozy_quokka3375/n/n85a0d5e9449d",
       "badge": "無料",
       "highlight": true
+    },
+    {
+      "label": "業務効率化AIプロンプト集（コピペ20選）",
+      "description": "議事録・メール・GAS・Excel をまるごと時短",
+      "url": "https://note.com/cozy_quokka3375/n/nda68efbde9a9",
+      "badge": "980円"
+    },
+    {
+      "label": "請求書・帳票GASテンプレ",
+      "description": "スプレッドシートからPDFを自動作成",
+      "url": "https://note.com/cozy_quokka3375/n/nba36f75f6177",
+      "badge": "980円"
     },
     {
       "label": "業務自動化テンプレ5点パック",
@@ -17,10 +29,16 @@
       "badge": "本命"
     },
     {
-      "label": "請求書・帳票GASテンプレ",
-      "description": "スプレッドシートからPDF自動作成（980円・入口）",
-      "url": "https://note.com/cozy_quokka3375/n/nba36f75f6177",
-      "badge": "980円"
+      "label": "AI業務自動化の代行・構築",
+      "description": "面倒な定型作業を、あなたの環境に合わせて自動化（ココナラ）",
+      "url": "https://coconala.com/services/4266986",
+      "badge": "代行"
+    },
+    {
+      "label": "LLMO診断（AIに見つけてもらえるか）",
+      "description": "生成AI時代の見つけられ方をチェック・改善提案（ココナラ）",
+      "url": "https://coconala.com/services/4277675",
+      "badge": "診断"
     },
     {
       "label": "【PR】会計ソフト freee（個人事業主の定番）",
@@ -36,22 +54,9 @@
     }
   ],
   "socialLinks": [
-    {
-      "platform": "Threads",
-      "url": "https://www.threads.net/@jidouka_omochi",
-      "icon": "threads"
-    },
-    {
-      "platform": "X",
-      "url": "https://x.com/jidouka_sara",
-      "icon": "x"
-    },
-    {
-      "platform": "note",
-      "url": "https://note.com/cozy_quokka3375",
-      "icon": "note",
-      "optional": true
-    }
+    { "platform": "X", "url": "https://x.com/jidouka_sara", "icon": "x" },
+    { "platform": "Threads", "url": "https://www.threads.net/@jidouka_omochi", "icon": "threads" },
+    { "platform": "note", "url": "https://note.com/cozy_quokka3375", "icon": "note", "optional": true }
   ],
   "footer": "© 2026 おもち｜AI自動化｜一部にアフィリエイト広告（PR）を含みます"
 }
